@@ -1,0 +1,27 @@
+<% include header %>
+
+<section class="hero" id="hero">
+    <div class="container">
+        <div class="row" ng-controller="SplashCtrl">
+            <div class="col-md-8 col-md-offset-2 text-center inner" ng-hide="isMobile">
+                <a href="./select" onclick="onclick($event)"><h1><img src="img/logo.png" alt="幕末志士MUSIC">(β)</h1>
+                    <span class="click-message">Click here to start.</span></a><br><br>
+                    <span>当サイトは音が出ます。音量にご注意ください。</span><br>
+                    <span>[推奨ブラウザ]Chromeで動作確認しております。Chromeを推奨します。</span><br>
+                    <span>[免責事項]趣味の範囲で管理しておりますので、エラーが出ても怒らないでください。</span><br>
+                    <br>
+<span>
+■キー操作■<br>
+使用するキー：左から順に、Z X C V B<br>
+ゲラキー：W キー</span>
+            </div>
+
+            <!--<div class="col-md-8 col-md-offset-2 text-center inner" ng-show="isMobile">
+                <h1><img src="img/logo.png" alt="幕末志士MUSIC" class="sp-logo"></h1>
+                <span class="mobile-message">Sorry, This site is designed specifically for PCs.</span>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+<% include footer %>

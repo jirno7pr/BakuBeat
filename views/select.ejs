@@ -1,0 +1,36 @@
+<% include header %>
+
+<section id="select">
+    <div class="container">
+        <div>
+            <div class="row">
+                <div class="col-md-4"><h1 id="logo"><img src="img/logo.png" alt="幕BEAT"></h1></div>
+            </div>
+            <div class="row search">
+                <div class="col-md-3">
+                    <input class="form-control"type="search" placeholder="Search" ng-model="search">
+                </div>
+                <div class="col-md-2 sort"><span ng-click="changeSort()"><i class="fa fa-sort"></i>Sort by level</span></div>
+            </div>
+            <div class="row">
+                <% music.forEach(function (item, key) { %>
+                <div class="col-md-4 item" ng-repeat="m in music | filter:search | orderBy:'level':desc" ng-mouseenter="mouseover($event)">
+                    <a href="/game/<%= item.id %>" ng-click="onclick($event)">
+                        <img src="<%= item.img %>" class="music-image">
+                        <div class="music-description">
+                            <span class="title"><i class="fa fa-headphones"></i><%= item.title %></span><br>
+                            <span class="author"><%= item.by %></span><br>
+                            <span class="select-license"><%= item.license %></span><br>
+                            <span class="mode <%= item.mode %>"><%= item.mode %></span>
+                            <span class="level">Level <% for(var i=0;i<item.level;i++){%><i class="fa fa-star-o level"></i><% }%></span>
+                        </div>
+                    </a>
+                </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</section>
+<a ng-href="#/help" id="help"><i class="fa fa-question-circle"></i></a>
+
+<% include footer %>

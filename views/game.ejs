@@ -1,0 +1,41 @@
+<% include header %>
+
+<div>    
+    <div id="main">
+        <h1 id="game-scene-logo"><img src="/img/logo.png" alt="幕BEAT"></h1>
+        <div class="spinner" ng-hide="loaded">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+        <span id="start-message">Press Enter Key to start.</span>
+        <div id="info">
+            <img src="<%= music.img %>" class="music-image">
+            <div class="music-description">
+                <span class="title"><i class="fa fa-headphones"></i><%= music.title %></span><br>
+                <span class="author"><%= music.by %></span><br>
+                <span class="select-license"><%= music.license %></span><br>
+                <span class="mode <%= music.mode %>"><%= music.mode %></span><span class="level">Level <% for(var i=0;i<music.level;i++){%><i class="fa fa-star-o level"></i><% }%></span><br>
+                <span class="high-score"><i class="fa fa-trophy"></i>  your best </span>
+            </div>
+        </div>
+        <div id="enchant-stage" style="width:980px;height:600px"></div>
+                <a href="/select" class="to-main-menu"><i class="fa fa-th-large"></i>曲選択に戻る</a>
+    </div>
+<!--
+    <div ng-show="end">
+        <div ng-show="end" id="overlay-inner">
+            <div class="stats">
+                <p class="rank"><span class="explain">your rank is..</span>{{rank}}</p>
+                <p class="result">{{result}}</p>
+                <p class="score">{{score}}</p>
+                <a ng-href="#/select" class="to-main-menu"><i class="fa fa-th-large"></i>Menu</a>
+                <a href="{{tweet}}" class="to-twitter" target="_blank"><i class="fa fa-twitter"></i>Tweet</a>
+                <span id="key-log">{{key}}</span>
+                <span id="timing-log">{{timing}}</span>
+            </div>
+        </div>
+    </div>
+-->
+</div>
+
+<% include footer %>

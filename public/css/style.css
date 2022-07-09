@@ -1,0 +1,348 @@
+/* ==========================================================================
+common
+========================================================================== */
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../img/wasi.png);
+    text-shadow: -1px 1px 0 rgba(255,255,255,0.8);
+    color:#222;
+    overflow-x:hidden;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#main {
+    width:980px;
+    margin:0 auto;
+    position:relative;
+}
+
+#view {
+
+}
+
+
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+#timing-log, #key-log {
+    display:none;
+}
+
+
+/* ==========================================================================
+splash scene
+========================================================================== */
+div.top-copylight {
+    position:absolute;
+    top:100%;
+    left:50%;
+    text-align:center;
+    margin: -120px 0 0 -150px;
+
+}
+
+.sp-store {
+    width:120px;
+    height:auto;
+    margin:40px 0 0 0; 
+}
+span.mobile-message {
+    font-size:70%;
+}
+
+.sp-logo {
+    width:120px;
+    height:auto;
+}
+
+div.top-copylight > .copyright{
+
+}
+
+.click-message{
+    -webkit-animation:blink 1s ease-in-out infinite alternate;
+    -moz-animation:blink 1s ease-in-out infinite alternate;
+    animation:blink 1s ease-in-out infinite alternate;
+}
+
+
+/* ==========================================================================
+select & game scene
+========================================================================== */
+
+h1#logo {
+    margin:50px 0 0 0px;
+}
+
+.form-control {
+    height:16px;
+    padding:5px;
+}
+
+.search {
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+.mode {
+    background: #ccc;
+    padding: 2px 5px;
+    color:#eee;
+    text-decoration: none;
+    text-shadow :none;
+    margin: 3px 8px 3px 0;
+    border-radius: 3px;
+}
+.normal {
+    background:#2980B9;
+}
+.another {
+    background:#D35400;
+}
+
+.sort {
+    padding-top:5px;
+}
+
+#enchant-stage {
+    margin:0 auto;
+}
+
+img.music-image {
+    width:140px;
+    height:auto;
+    border-radius: 5px;
+}
+
+div#info {
+    position: absolute;
+    top:160px;
+    left:20px;
+    width:400px;
+}
+
+div.music-description {
+    position:absolute;
+    top:0;
+    left:180px;
+    font-weight:bold;
+    font-size:90%;
+}
+
+div.copyright {
+    margin: 50px auto 50px;
+    font-size: 11px;
+    width:300px;
+    color:#333;
+}
+
+i {
+    margin: 0 3px 0 0;
+}
+
+span.level {
+    margin : 0 5px 0 0;
+}
+
+span.title {
+    font-size:18px;
+}
+
+span.select-license {
+    font-size:12px;
+}
+
+div.item {
+    margin: 0 0 100px;
+}
+
+h1#game-scene-logo {
+    position:absolute;
+    left:20px;
+    top:10px;
+}
+
+#start-message{
+    position:absolute;
+    top:50%;
+    left:50%;    
+    -webkit-animation:blink 1s ease-in-out infinite alternate;
+    -moz-animation:blink 1s ease-in-out infinite alternate;
+    animation:blink 1s ease-in-out infinite alternate;
+}
+
+#help {
+    position:absolute;
+    top:10px;
+    left:100%;
+    margin:0 0 0 -50px;
+    color:#222;
+    font-size:32px;
+}
+
+#footer-ad{
+    width:728px;
+    margin:30px auto 50px auto;
+}
+/* ==========================================================================
+result
+========================================================================== */
+#overlay {
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:900;
+    top:0;
+    left:0;
+    color:#111;
+}
+
+#overlay-inner {
+    width:980px;
+    margin:0 auto;
+    position:relative;
+}
+
+div.stats {
+    width:560px;
+    margin: 60px auto;
+    text-align:center;
+}
+
+p.rank, p.result, p.score {
+    text-shadow:none;
+    font-size:108px;
+    font-weight:bold;
+    line-height:114px;
+    margin:0;
+    padding:0;
+    color:#111;
+}
+
+#playstore {
+    width:100px;
+    height:auto;
+    position:absolute;
+    top:55px;
+    left:280px;
+}
+
+ p.score {
+    margin:0 0 40px;
+}
+
+a.to-main-menu {
+    background:#E74C3C;
+    padding:15px 50px;
+    color:#fff;
+    border-radius:2px;
+    margin: 40px 0 0 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    font-size:20px;
+}
+
+a.to-twitter {
+    background:#3498DB;
+    padding:15px 50px;
+    color:#fff;
+    border-radius:2px;
+    margin: 40px 0 0 10px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    font-size:20px;
+}
+
+a.to-main-menu:hover,
+a.to-twitter:hover {
+    opacity:0.8;
+}
+span.explain {
+    font-size:24px;
+}
+
+
+/* ==========================================================================
+angular animate
+========================================================================== */
+.ng-enter,
+.ng-move {
+    -webkit-transition: opacity 0.4s linear;
+    transition: opacity 0.4s linear;
+}
+.ng-enter {
+    opacity: 0;
+}
+.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+.ng-leave {
+    opacity: 1;
+}
+.ng-leave.ng-leave-active {
+    opacity: 0;
+}
+.ng-move {
+    opacity: .5;
+}
+.ng-move.ng-move-active {
+    opacity: 1;
+}
+
+/* ==========================================================================
+loader
+========================================================================== */
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top:50%;
+  left:50%;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #E74C3C;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: bounce 2.0s infinite ease-in-out;
+  animation: bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
